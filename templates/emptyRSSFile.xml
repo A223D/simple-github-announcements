@@ -1,1 +1,16 @@
-Replace this with a standard empty RSS file
+<rss version="2.0">
+    <channel>
+
+        <title></title>
+        <link></link>
+        <description>
+        </description>
+        <language></language>
+        <pubDate></pubDate>
+        <lastBuildDate></lastBuildDate>
+        <docs></docs>
+        <managingEditor></managingEditor>
+        <webMaster></webMaster>
+        
+    </channel>
+</rss>

@@ -13,17 +13,17 @@ jobs:
     announcer:
         runs-on: ubuntu-latest
         steps:
-            - name: Just a title
-              run: echo "🎉 Trying something new"
-            - name: Checkout repository code
+            - name: Setting Up Environment 🖥️
+              run: echo "Starting announcer Job"
+            - name: Trying to install python 🐍
+              uses: actions/setup-python@v3
+            - name: Checkout repository code 🧬
               uses: actions/checkout@v4
               with:
                 ref: main
             - name: Trying to see what I got
               run: ls -al
-            - name: Trying to install python
-              uses: actions/setup-python@v3
-            - name: Running the parsing script
+            - name: Running the parsing script 🛠️
               run: python ./scripts/parser.py
-            
-
+            - name: Running linter 🔍
+              run: python ./scripts/parser.py
