@@ -21,9 +21,11 @@ jobs:
               uses: actions/checkout@v4
               with:
                 ref: main
-            - name: Trying to see what I got
+                sparse-checout: |
+                  newAnnouncement.txt
+            - name: Trying to see what I got 👀
               run: ls -al
-            - name: Running the parsing script 🛠️
-              run: python ./scripts/parser.py
-            - name: Running linter 🔍
-              run: python ./scripts/parser.py
+            # - name: Running the parsing script 🛠️
+            #   run: python ./scripts/parser.py
+            # - name: Running linter 🔍
+            #   run: python ./scripts/parser.py
