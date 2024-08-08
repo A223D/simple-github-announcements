@@ -1,0 +1,17 @@
+name: Announcer Action
+
+run-name: Building and publishing ${{ github.actor }}'s announcement 📢
+
+on:
+    push:
+        branches:
+            - 'main'
+        paths:
+            - 'newAnnouncement.txt'
+
+jobs:
+    announcer:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "🎉 Trying something new"
+
