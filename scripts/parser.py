@@ -14,13 +14,10 @@ import sys
 import xml.etree.ElementTree as ET
 import os
 import shutil
+
+announcementsBranchLocation = "./announcementsBranch/"
+
 announcementData = ET.Element('item')
-
-newAnnouncementFileObject = open(sys.argv[1])
-
-debug = True
-
-announcementLines = newAnnouncementFileObject.readlines()
 
 tempAnnouncementDict = {}
 
@@ -33,6 +30,11 @@ announcementKeys = {
     "language",
     "managing editor"
 }
+
+debug = True
+
+newAnnouncementFileObject = open(sys.argv[1])
+announcementLines = newAnnouncementFileObject.readlines()
 
 #newAnnouncement file parser
 for line in announcementLines:
@@ -61,15 +63,21 @@ if debug: print(tempAnnouncementDict)
 if "topic" not in tempAnnouncementDict:
     raise ValueError("This announcement does not have a topic")
 
-if not os.path.isfile(os.path.join(NOTSUREYET, tempAnnouncementDict["topic"] + ".xml")):
+if debug: print("Now checking if", os.path.join(announcementsBranchLocation, tempAnnouncementDict["topic"] + ".xml"), "exists")
+
+if not os.path.isfile(os.path.join(announcementsBranchLocation, tempAnnouncementDict["topic"] + ".xml")):
+    if debug: print("The topic file does not exist. Creating it now")
     #create the file from the static template given and close it
-    shutil.copyfile("./templates/emptyRSSFile.xml", os.path.join(NOTSUREYET, tempAnnouncementDict["topic"] + ".xml"))
-    pass
+    shutil.copyfile("./mainBranch/templates/emptyRSSFile.xml", os.path.join(announcementsBranchLocation, tempAnnouncementDict["topic"] + ".xml"))
+
+    #check if we have all the basic data needed to create this topic file
+    
+    #open the file and feed basic data
 
 #from here, you can assume that the file is present, build the item object and attach it
 
 #replace newAnnouncements.txt content from the file given in templates
-if debug: print("Removing file")
+# if debug: print("Removing file")
 #if not debug: os.remove(newAnnouncement.txt)
 
-shutil.copyfile("./templates/newAnnouncementTemplate.txt", "./newAnnouncement.txt")
+# shutil.copyfile("./templates/newAnnouncementTemplate.txt", "./newAnnouncement.txt")

@@ -35,7 +35,7 @@ jobs:
               run: ls -al
             - run: ls -al mainBranch/
             - run: ls -al announcementsBranch/
-            # - name: Running the parsing script 🛠️
-            #   run: python ./scripts/parser.py
+            - name: Running the parsing script 🛠️
+              run: python ./mainBranch/scripts/parser.py ./mainBranch/newAnnouncement.txt
             # - name: Running linter 🔍
             #   run: python ./scripts/parser.py

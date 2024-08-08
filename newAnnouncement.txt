@@ -1,3 +1,8 @@
 Edit this file, commit, and push to trigger a new announcement. 
 
 Normal change to trigger the github action
+
+Title: New Hackathon
+Topic: Hackathons
+Description: There is a new hackathon happening soon
+Image: This links to an image 
