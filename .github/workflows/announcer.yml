@@ -15,17 +15,23 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Setting Up Environment 🖥️
-              run: echo "Starting announcer Job"
+              run: echo "Starting announcer Job" && mkdir mainBranch && mkdir announcementsBranch
             - name: Trying to install python 🐍
               uses: actions/setup-python@v3
-            - name: Checkout repository code 🧬
+            - name: Checkout main branch code 🧬
               uses: actions/checkout@v4
               with:
                 ref: main
-                sparse-checkout: |
-                  newAnnouncement.txt
+                path: mainBranch
+            - name: Checkout announcements branch code 🧬
+              uses: actions/checkout@v4
+              with:
+                ref: announcements
+                path: announcementsBranch
             - name: Trying to see what I got 👀
               run: ls -al
+            - run: ls ./mainBranch/
+            - run: ls ./announcementsBranch/
             # - name: Running the parsing script 🛠️
             #   run: python ./scripts/parser.py
             # - name: Running linter 🔍
