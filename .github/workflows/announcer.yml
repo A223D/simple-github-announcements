@@ -29,6 +29,8 @@ jobs:
               uses: actions/checkout@v4
               with:
                 ref: announcements
+                path: announcementsBranch
+                fetch-depth: 0
             - name: Trying to see what I got 👀
               run: ls -al
             - run: ls -al mainBranch/
