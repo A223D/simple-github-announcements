@@ -8,6 +8,7 @@ on:
             - 'main'
         paths:
             - 'newAnnouncement.txt'
+    workflow_dispatch:
 
 jobs:
     announcer:
@@ -21,7 +22,7 @@ jobs:
               uses: actions/checkout@v4
               with:
                 ref: main
-                sparse-checout: |
+                sparse-checkout: |
                   newAnnouncement.txt
             - name: Trying to see what I got 👀
               run: ls -al
