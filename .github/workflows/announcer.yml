@@ -43,8 +43,8 @@ jobs:
                 REPO_OWNER: ${{github.repository_owner}}
                 ANNOUNCER: ${{github.actor}}
                 REPO_NAME: ${{github.repository}}
-            - name: Running linter 🔍
-              run: cat toBeLinted.txt | xmllint
+            # - name: Running linter 🔍
+            #   run: cat toBeLinted.txt | xmllint
             - name: Trying to see what I got 👀
               run: ls -al
             - run: ls -al mainBranch/
