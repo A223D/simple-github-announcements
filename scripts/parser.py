@@ -167,11 +167,14 @@ newAnnouncementAuthor.text = os.environ["ANNOUNCER"]
 #set the pubDate and the latest buildDate
 dateTimeString = datetime.datetime.now(datetime.timezone.utc).strftime("%a, %d %b %Y %H:%M:%S %Z") #for eg Tue, 10 Jun 2003 04:00:00 GMT
 newAnnouncementPubDate = ET.SubElement(newAnnouncementItem, 'pubDate')
-newAnnouncementAuthor.text = dateTimeString
+newAnnouncementPubDate.text = dateTimeString
 rssFileChannel.find("lastBuildDate").text = dateTimeString
 
 #write the file
 rssFileTree.write(topicFilePath)
+
+#run the linter
+os.system("xmllint --format "+topicFilePath)
 
 #now push the announcements branch
 

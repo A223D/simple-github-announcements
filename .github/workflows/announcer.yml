@@ -20,6 +20,8 @@ jobs:
               run: ls -al
             - name: Trying to install python 🐍
               uses: actions/setup-python@v3
+            - name: Installing the XML linter
+              run: apt-get install -y libxml2-utils
             - name: Checkout main branch code 🧬
               uses: actions/checkout@v4
               with:
