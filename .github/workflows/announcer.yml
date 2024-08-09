@@ -10,6 +10,9 @@ on:
             - 'newAnnouncement.txt'
     workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
     announcer:
         runs-on: ubuntu-latest
