@@ -119,10 +119,10 @@ if not os.path.isfile(topicFilePath):
 
     #assign pubDate and build date
     dateTimeString = datetime.datetime.now(datetime.timezone.utc).strftime("%a, %d %b %Y %H:%M:%S %Z") #for eg Tue, 10 Jun 2003 04:00:00 GMT
-    root.find("pubDate").text = dateTimeString
-    if debug: print("Assigned pubDate to", root.find("pubDate").text)
-    root.find("lastBuildDate").text = dateTimeString
-    if debug: print("Assigned lastBuildDate to", root.find("lastBuildDate").text)
+    channel.find("pubDate").text = dateTimeString
+    if debug: print("Assigned pubDate to", channel.find("pubDate").text)
+    channel.find("lastBuildDate").text = dateTimeString
+    if debug: print("Assigned lastBuildDate to", channel.find("lastBuildDate").text)
 
     #assign docs
     channel.find("docs").text = "https://www.rssboard.org/rss-specification"
