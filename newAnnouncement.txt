@@ -2,9 +2,9 @@ Edit this file, commit, and push to trigger a new announcement.
 
 Normal change to trigger the github action
 
-Title: New Hackathon
+Title: Newer Hackathon
 Topic: Hackathons
-Topic Description: There is a new hackathon happening soon
+Topic Description: There is an even newer hackathon happening even sooner
 Language: en-ca
 Managing Editor: Kushagra
 Image: This links to an image 
