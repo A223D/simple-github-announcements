@@ -173,8 +173,8 @@ rssFileChannel.find("lastBuildDate").text = dateTimeString
 #write the file
 rssFileTree.write(topicFilePath)
 
-#run the linter
-os.system("xmllint --format "+topicFilePath)
+#run the linter - Think about how to move this from the parser script to workflow
+os.system("cat "+topicFilePath+" | xmllint --format - | tee "+topicFilePath)
 
 #now push the announcements branch
 
