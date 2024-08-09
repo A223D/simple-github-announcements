@@ -37,5 +37,15 @@ jobs:
             - run: ls -al announcementsBranch/
             - name: Running the parsing script 🛠️
               run: python ./mainBranch/scripts/parser.py ./mainBranch/newAnnouncement.txt
+              env:
+                REPO_OWNER: ${{github.repository_owner}}
+                ANNOUNCER: ${{github.actor}}
+                REPO_NAME: ${{github.repository}}
+            - name: Trying to see what I got 👀
+              run: ls -al
+            - run: ls -al mainBranch/
+            - run: ls -al announcementsBranch/
+            - name: Let's look at the new RSS file 👀
+              run: cat announcementsBranch/Hackathons.xml
             # - name: Running linter 🔍
             #   run: python ./scripts/parser.py

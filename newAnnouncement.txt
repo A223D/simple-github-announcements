@@ -4,5 +4,7 @@ Normal change to trigger the github action
 
 Title: New Hackathon
 Topic: Hackathons
-Description: There is a new hackathon happening soon
+Topic Description: There is a new hackathon happening soon
+Language: en-us
+Managing Editor: Kushagra
 Image: This links to an image 

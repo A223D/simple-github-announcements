@@ -24,23 +24,25 @@ There is a concern that clients will have to download ever-increasing topic file
 
 1. Edit the `newAnnouncement.txt` file in the main branch to create a new announcement.
 
-   * If this a new topic or the very first announcement after forking, there are is some additional information that must be included in this file, **along with the infomation in the next point**.
+   * If this a new topic or the very first announcement after forking, there are is some additional information that should be included in this file, **along with the information in the next point**.
 
-     * A description about this topic aka `Topic Description`
+     * A description about this topic aka `Topic Description` (required)
 
-     * [The language you will publish announcements in aka `Language`. This must be a valid language code as described here](https://www.rssboard.org/rss-language-codes).
+     * [The language you will publish announcements in aka `Language`. This must be a valid language code as described here](https://www.rssboard.org/rss-language-codes). (required)
 
-     * The person in-charge of the content aka `Managing Editor`
+     * A link about this specific topic aka `Topic Link`. This can just be the link to all the announcements. (optional)
+
+     * The person in-charge of the content aka `Managing Editor` (required)
 
    * If the topic you intend to publish to has had announcements before, then only the following information may be needed. There needs to be atleast a title or a description.
 
-     * The topic aka `Topic`
+     * The topic aka `Topic` (required)
 
-     * Title aka `Title`
+     * Title aka `Title` (optional if `Description` is present)
 
-     * Description aka `Description`
+     * Description aka `Description` (optional if `Title` is present)
 
-     * Link aka `Link` - This is where someone can go to find more information about the announcement.
+     * Link aka `Link` - This is where someone can go to find more information about the announcement. (optional)
 
      * Image support will be added in the future
 
