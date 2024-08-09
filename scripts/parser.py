@@ -14,6 +14,7 @@ import sys
 import xml.etree.ElementTree as ET
 import os
 import shutil
+import datetime
 
 announcementsBranchLocation = "./announcementsBranch/"
 
@@ -85,7 +86,7 @@ if debug: print("Now checking if", topicFilePath, "exists")
 
 if not os.path.isfile(topicFilePath):
     if debug: print("The topic file does not exist. Creating it now")
-    
+
     #create the file from the static template given and close it
     shutil.copyfile("./mainBranch/templates/emptyRSSFile.xml", topicFilePath)
 
@@ -117,7 +118,11 @@ if not os.path.isfile(topicFilePath):
     if debug: print("Assigned language to", channel.find("language").text)
 
     #assign pubDate and build date
-    #TBD
+    dateTimeString = datetime.datetime.now(datetime.timezone.utc).strftime("%a, %d %b %Y %H:%M:%S %Z") #for eg Tue, 10 Jun 2003 04:00:00 GMT
+    root.find("pubDate").text = dateTimeString
+    if debug: print("Assigned pubDate to", root.find("pubDate").text)
+    root.find("lastBuildDate").text = dateTimeString
+    if debug: print("Assigned lastBuildDate to", root.find("lastBuildDate").text)
 
     #assign docs
     channel.find("docs").text = "https://www.rssboard.org/rss-specification"
@@ -134,6 +139,41 @@ if not os.path.isfile(topicFilePath):
     newFileTree.write(topicFilePath)
 
 #from here, you can assume that the file is present, build the item object and attach it
+rssFileTree = ET.parse(topicFilePath)
+rssFileRoot = rssFileTree.getroot()
+rssFileChannel = rssFileRoot.find("channel")
+
+newAnnouncementItem = ET.SubElement(rssFileChannel, 'item')
+
+if 'title' not in tempAnnouncementDict and 'description' not in tempAnnouncementDict:
+    raise ValueError("An announcement must have a title or a description")
+
+#add title
+newAnnouncementTitle = ET.SubElement(newAnnouncementItem, 'title')
+newAnnouncementTitle.text = tempAnnouncementDict['title']
+
+#add description
+newAnnouncementDescription = ET.SubElement(newAnnouncementItem, 'description')
+newAnnouncementDescription.text = tempAnnouncementDict.get("title", "")
+
+#add link
+newAnnouncementLink = ET.SubElement(newAnnouncementItem, 'link')
+newAnnouncementLink.text = tempAnnouncementDict.get('link', "https://raw.githubusercontent.com/"+os.environ["REPO_OWNER"]+"/"+os.environ["REPO_NAME"].split('/')[1]+"/announcements/"+tempAnnouncementDict["topic"]+".xml")
+
+#add author
+newAnnouncementAuthor = ET.SubElement(newAnnouncementItem, 'author')
+newAnnouncementAuthor.text = os.environ["ANNOUNCER"]
+
+#set the pubDate and the latest buildDate
+dateTimeString = datetime.datetime.now(datetime.timezone.utc).strftime("%a, %d %b %Y %H:%M:%S %Z") #for eg Tue, 10 Jun 2003 04:00:00 GMT
+newAnnouncementPubDate = ET.SubElement(newAnnouncementItem, 'pubDate')
+newAnnouncementAuthor.text = dateTimeString
+rssFileChannel.find("lastBuildDate").text = dateTimeString
+
+#write the file
+rssFileTree.write(topicFilePath)
+
+#now push the announcements branch
 
 #replace newAnnouncements.txt content from the file given in templates
 # if debug: print("Removing file")
