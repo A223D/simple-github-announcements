@@ -1,4 +1,4 @@
-# Edit this file, commit, and push to trigger a new announcement. Comments start with #, so uncomment the revelant information.
+# Edit this file, commit, and push to trigger a new announcement. Comments start with #, so uncomment the relevant information.
 # The required fields are marked with an asterisk(*)
 # Order of information presented does not matter. 
 # Here are the details needed for a new announcement to an existing topic:

@@ -24,7 +24,7 @@ There is a concern that clients will have to download ever-increasing topic file
 
 1. Edit the `newAnnouncement.txt` file in the main branch to create a new announcement.
 
-   * If this a new topic or the very first announcement after forking, there are is some additional information that should be included in this file, **along with the information in the next point**.
+   * If this is a new topic or the very first announcement after forking, there is some additional information that should be included in this file, **along with the information in the next point**.
 
      * A description about this topic aka `Topic Description` (required)
 
@@ -66,7 +66,7 @@ https://raw.githubusercontent.com/<username>/simple-github-announcements/announc
 Here is an example of a file which is creating a new topic and the first announcement for that topic.
 
 ```python
-# Edit this file, commit, and push to trigger a new announcement. Comments start with #, so uncomment the revelant information.
+# Edit this file, commit, and push to trigger a new announcement. Comments start with #, so uncomment the relevant information.
 # The required fields are marked with an asterisk(*)
 # Order of information presented does not matter. 
 # Here are the details needed for a new announcement to an existing topic:
@@ -85,7 +85,7 @@ Here is an example of a file which is creating a new topic and the first announc
 # You can remove this guideline if needed, but it is recommended to keep it and just copy the above lines below
 
 Topic*: Free Food
-Topic Description*: This annoucement chain tracks free food around the office.
+Topic Description*: This announcement chain tracks free food around the office.
 Topic Link: https://www.businessinsider.com/free-food-silicon-valley-tech-employees-apple-google-facebook-2018-7
 Language*: en-ca
 Managing Editor*: Kushagra(example@email.com)
@@ -99,7 +99,7 @@ Link: https://www.menshealth.com/nutrition/a26149219/is-pizza-healthy/
 Here is an example of a file which is creating a new announcement for an existing topic.
 
 ```python
-# Edit this file, commit, and push to trigger a new announcement. Comments start with #, so uncomment the revelant information.
+# Edit this file, commit, and push to trigger a new announcement. Comments start with #, so uncomment the relevant information.
 # The required fields are marked with an asterisk(*)
 # Order of information presented does not matter. 
 # Here are the details needed for a new announcement to an existing topic:
@@ -127,7 +127,7 @@ Link: https://www.pmq.com/pizza-is-good-for-you/
 
 ### Trying to Change Topic Information Later
 
-If you add information like `Topic Description`, `Language`, or `Managing Editor` to a new announcement to an existing topic, this information be will ignored. This type of information is set at the conception of a new topic and is **supposed to be immutable by design**. Functionality to delete a topic(and all of its announcements) will be added later on.
+If you add information like `Topic Description`, `Language`, or `Managing Editor` to a new announcement to an existing topic, this information will be ignored. This type of information is set at the conception of a new topic and is **supposed to be immutable by design**. Functionality to delete a topic(and all of its announcements) will be added later on.
 
 ### What Happens When a Client Polls a topic with multiple previously published announcements for the first time?
 
