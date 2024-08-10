@@ -16,11 +16,11 @@
 #
 # You can remove this guideline if needed, but it is recommended to keep it and just copy the above lines below
 
-Topic*: Free Food
+Topic*: Free Food NEW
 Topic Description*: This annoucement chain tracks free food around the office.
 Topic Link: https://www.businessinsider.com/free-food-silicon-valley-tech-employees-apple-google-facebook-2018-7
 Language*: en-ca
 Managing Editor*: Kushagra(example@email.com)
-Title*: Left-over pizza on the 9th floor 🍕
-Description*: FW team had an event so leftover pizza available on an FCFS basis
+Title*: Left-over pizza on the 12th floor 🍕
+Description*: CEO team had an event so leftover pizza available on an FCFS basis
 Link: https://www.menshealth.com/nutrition/a26149219/is-pizza-healthy/

@@ -29,7 +29,8 @@ announcementKeys = {
     "topic",
     "topic description",
     "language",
-    "managing editor"
+    "managing editor",
+    "topic link"
 }
 
 keysRequiredForNewTopic = {
@@ -180,4 +181,4 @@ rssFileChannel.find("lastBuildDate").text = dateTimeString
 rssFileTree.write(topicFilePath)
 
 #run the linter - Think about how to move this from the parser script to workflow
-os.system("cat "+topicFilePath+" | xmllint --format - | tee "+topicFilePath)
+os.system("cat \""+topicFilePath+"\" | xmllint --format - | tee \""+topicFilePath+"\"")
