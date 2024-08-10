@@ -51,8 +51,8 @@ jobs:
                 ls -al
                 ls -al mainBranch/
                 ls -al announcementsBranch/
-            - name: Let's look at the new RSS file 👀
-              run: cat announcementsBranch/Hackathons.xml
+            # - name: Let's look at the new RSS file 👀
+            #   run: cat announcementsBranch/Hackathons.xml
             - name: Let's push announcements to GitHub 🚀
               run: |
                 cd announcementsBranch
