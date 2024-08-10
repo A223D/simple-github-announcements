@@ -65,7 +65,7 @@ for line in announcementLines:
         continue
 
     #split string via first colon
-    key = line[:index].strip().lower() #strip removes leading and trailing whitespaces
+    key = line[:index].strip().lower().replace("*", "") #strip removes leading and trailing whitespaces, also removing asterisks
     data = line[index+1:].strip() #strip removes leading and trailing whitespaces
     if debug: print("The key I got was", key)
     if debug: print("The data I got was", data)

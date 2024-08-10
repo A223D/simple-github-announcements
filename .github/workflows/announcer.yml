@@ -53,7 +53,7 @@ jobs:
                 ls -al announcementsBranch/
             - name: Let's look at the new RSS file 👀
               run: cat announcementsBranch/Hackathons.xml
-            - name: Let's push announcements to github 🚀
+            - name: Let's push announcements to GitHub 🚀
               run: |
                 cd announcementsBranch
                 # Note: the following account information will not work on GHES
@@ -62,11 +62,11 @@ jobs:
                 git add .
                 git commit -m "Pushing ${{ github.actor }}'s annoucement"
                 git push
-            - name: Resetting main branch announcements file and pushing 🔄🚀
-              run: |
-                cd mainBranch
-                rm newAnnouncement.txt
-                cp ./templates/newAnnouncementTemplate.txt ./newAnnouncement.txt
-                git add .
-                git commit -m "Resetting newAnnouncement.txt file"
-                git push
+            # - name: Resetting main branch announcements file and pushing 🔄🚀
+            #   run: |
+            #     cd mainBranch
+            #     rm newAnnouncement.txt
+            #     cp ./templates/newAnnouncementTemplate.txt ./newAnnouncement.txt
+            #     git add .
+            #     git commit -m "Resetting newAnnouncement.txt file"
+            #     git push

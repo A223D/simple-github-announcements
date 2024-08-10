@@ -65,16 +65,62 @@ https://raw.githubusercontent.com/<username>/simple-github-announcements/announc
 
 Here is an example of a file which is creating a new topic and the first announcement for that topic.
 
-```
-🚧 Coming up soon
+```python
+# Edit this file, commit, and push to trigger a new announcement. Comments start with #, so uncomment the revelant information.
+# The required fields are marked with an asterisk(*)
+# Order of information presented does not matter. 
+# Here are the details needed for a new announcement to an existing topic:
+# 
+# Topic*:
+# Title*:
+# Description*:
+# Link:
+#
+# Additional information required for a new topic
+# Topic Description*:
+# Language*:
+# Topic Link:
+# Managing Editor*:
+#
+# You can remove this guideline if needed, but it is recommended to keep it and just copy the above lines below
+
+Topic*: Free Food
+Topic Description*: This annoucement chain tracks free food around the office.
+Topic Link: https://www.businessinsider.com/free-food-silicon-valley-tech-employees-apple-google-facebook-2018-7
+Language*: en-ca
+Managing Editor*: Kushagra(example@email.com)
+Title*: Left-over pizza on the 9th floor 🍕
+Description*: FW team had an event so leftover pizza available on an FCFS basis
+Link: https://www.menshealth.com/nutrition/a26149219/is-pizza-healthy/
 ```
 
 ### Example of a New Announcement to an Existing Topic
 
 Here is an example of a file which is creating a new announcement for an existing topic.
 
-```
-🚧 Coming up soon
+```python
+# Edit this file, commit, and push to trigger a new announcement. Comments start with #, so uncomment the revelant information.
+# The required fields are marked with an asterisk(*)
+# Order of information presented does not matter. 
+# Here are the details needed for a new announcement to an existing topic:
+# 
+# Topic*:
+# Title*:
+# Description*:
+# Link:
+#
+# Additional information required for a new topic
+# Topic Description*:
+# Language*:
+# Topic Link:
+# Managing Editor*:
+#
+# You can remove this guideline if needed, but it is recommended to keep it and just copy the above lines below
+
+Topic*: Free Food
+Title*: More left-over pizza on the 5th floor 🍕
+Description*: HW team ordered too much...
+Link: https://www.pmq.com/pizza-is-good-for-you/
 ```
 
 ## Misc.
