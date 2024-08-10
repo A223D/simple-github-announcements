@@ -55,6 +55,8 @@ announcementLines = newAnnouncementFileObject.readlines()
 
 #newAnnouncement file parser
 for line in announcementLines:
+    if len(line) == 0 or line[0] == "#":
+        continue
     #find the first colon in this line
     index = line.find(":")
 
@@ -138,7 +140,11 @@ if not os.path.isfile(topicFilePath):
 
     newFileTree.write(topicFilePath)
 
-#from here, you can assume that the file is present, build the item object and attach it
+#check if file is over 10 KB. Implement file splitting later
+if os.path.getsize(topicFilePath) > 10000:
+    raise RuntimeError("The announcement file is too large. Delete it and try again.")
+
+#from here, you can assume that the file is present(under limit), build the item object and attach it
 rssFileTree = ET.parse(topicFilePath)
 rssFileRoot = rssFileTree.getroot()
 rssFileChannel = rssFileRoot.find("channel")
@@ -154,7 +160,7 @@ newAnnouncementTitle.text = tempAnnouncementDict['title']
 
 #add description
 newAnnouncementDescription = ET.SubElement(newAnnouncementItem, 'description')
-newAnnouncementDescription.text = tempAnnouncementDict.get("title", "")
+newAnnouncementDescription.text = tempAnnouncementDict.get("description", "")
 
 #add link
 newAnnouncementLink = ET.SubElement(newAnnouncementItem, 'link')

@@ -63,3 +63,11 @@ jobs:
                 git add .
                 git commit -m "Pushing ${{ github.actor }}'s annoucement"
                 git push
+            - name: Resetting main branch announcements file
+              run: |
+                cd mainBranch
+                rm newAnnouncement.txt
+                cp ./templates/newAnnouncementTemplate.txt ./newAnnouncement.txt
+                git add .
+                git commit -m "Resetting newAnnouncement.txt file"
+                git push
