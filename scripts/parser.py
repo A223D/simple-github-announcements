@@ -1,15 +1,15 @@
 '''
-
 This script should be invoked when a new announcement is triggered. 
 
-1. Take the data from the newannouncement
+1. Parse the data from the newannouncement file and generate a dictionary containing the information.
 
-Run XML linter on 
+2. Run check to see if all keys requires are provided and create a new announcement file(if needed)
 
-Last. Reset new announcement script to the standard template given in templates. 
+3. Create the new announcement.
 
-
+4. Run XML linter on the new annoucement file. 
 '''
+
 import sys
 import xml.etree.ElementTree as ET
 import os
@@ -181,11 +181,3 @@ rssFileTree.write(topicFilePath)
 
 #run the linter - Think about how to move this from the parser script to workflow
 os.system("cat "+topicFilePath+" | xmllint --format - | tee "+topicFilePath)
-
-#now push the announcements branch
-
-#replace newAnnouncements.txt content from the file given in templates
-# if debug: print("Removing file")
-#if not debug: os.remove(newAnnouncement.txt)
-
-# shutil.copyfile("./templates/newAnnouncementTemplate.txt", "./newAnnouncement.txt")
