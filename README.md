@@ -2,7 +2,7 @@
 
 `simple-github-announcements` is a project which aims to build a non-intrusive announcement system in the most easiest way to use possible.
 
-> This repository serves as the "central server" for announcements and is meant to be forked. For a simple GitHub announcements client, visit [this repository(LINK TBD)]().  
+> This repository serves as the "central server" for announcements and is meant to be forked. For a simple GitHub announcements client, visit [this repository(LINK TBD)🚧]().  
 
 A pub-sub type architecture is used along with client polling to receive announcements to a local machine.
 
@@ -66,6 +66,7 @@ https://raw.githubusercontent.com/<username>/simple-github-announcements/announc
 Here is an example of a file which is creating a new topic and the first announcement for that topic.
 
 ```
+🚧 Coming up soon
 ```
 
 ### Example of a New Announcement to an Existing Topic
@@ -73,7 +74,7 @@ Here is an example of a file which is creating a new topic and the first announc
 Here is an example of a file which is creating a new announcement for an existing topic.
 
 ```
-
+🚧 Coming up soon
 ```
 
 ## Misc.
@@ -84,4 +85,4 @@ If you add information like `Topic Description`, `Language`, or `Managing Editor
 
 ### What Happens When a Client Polls a topic with multiple previously published announcements for the first time?
 
-This depends on the behaviour of the client, and is not the server's concern. Here is how the official client handles this: LINK TBD
+This depends on the behaviour of the client, and is not the server's concern. Here is how the official client handles this: LINK TBD 🚧

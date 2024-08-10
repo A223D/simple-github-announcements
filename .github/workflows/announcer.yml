@@ -19,8 +19,6 @@ jobs:
         steps:
             - name: Setting Up Environment 🖥️
               run: echo "Starting announcer Job" && mkdir mainBranch && mkdir announcementsBranch
-            - name: Trying to see what I got 👀
-              run: ls -al
             - name: Trying to install python 🐍
               uses: actions/setup-python@v3
             - name: Installing the XML linter
@@ -37,24 +35,24 @@ jobs:
                 path: announcementsBranch
                 fetch-depth: 0
             - name: Trying to see what I got 👀
-              run: ls -al
-            - run: ls -al mainBranch/
-            - run: ls -al announcementsBranch/
+              run: |
+                ls -al
+                ls -al mainBranch/
+                ls -al announcementsBranch/
             - name: Running the parsing script 🛠️
               run: python ./mainBranch/scripts/parser.py ./mainBranch/newAnnouncement.txt
               env:
                 REPO_OWNER: ${{github.repository_owner}}
                 ANNOUNCER: ${{github.actor}}
                 REPO_NAME: ${{github.repository}}
-            # - name: Running linter 🔍
-            #   run: cat toBeLinted.txt | xmllint
             - name: Trying to see what I got 👀
-              run: ls -al
-            - run: ls -al mainBranch/
-            - run: ls -al announcementsBranch/
+              run: |
+                ls -al
+                ls -al mainBranch/
+                ls -al announcementsBranch/
             - name: Let's look at the new RSS file 👀
               run: cat announcementsBranch/Hackathons.xml
-            - name: Let's push announcements to github
+            - name: Let's push announcements to github 🚀
               run: |
                 cd announcementsBranch
                 # Note: the following account information will not work on GHES
@@ -63,7 +61,7 @@ jobs:
                 git add .
                 git commit -m "Pushing ${{ github.actor }}'s annoucement"
                 git push
-            - name: Resetting main branch announcements file
+            - name: Resetting main branch announcements file and pushing 🔄🚀
               run: |
                 cd mainBranch
                 rm newAnnouncement.txt
