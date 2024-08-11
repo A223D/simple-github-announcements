@@ -6,7 +6,7 @@
     <description>This annoucement chain tracks free food around the office.</description>
     <language>en-ca</language>
     <pubDate>Sat, 10 Aug 2024 07:06:00 UTC</pubDate>
-    <lastBuildDate>Sat, 10 Aug 2024 07:06:00 UTC</lastBuildDate>
+    <lastBuildDate>Sun, 11 Aug 2024 03:51:41 UTC</lastBuildDate>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <managingEditor>Kushagra(example@email.com)</managingEditor>
     <webMaster>A223D</webMaster>
@@ -16,6 +16,13 @@
       <link>https://www.menshealth.com/nutrition/a26149219/is-pizza-healthy/</link>
       <author>A223D</author>
       <pubDate>Sat, 10 Aug 2024 07:06:00 UTC</pubDate>
+    </item>
+    <item>
+      <title>Left-over pizza on the 12th floor &#x1F355;</title>
+      <description>CEO team had an event so leftover pizza available on an FCFS basis</description>
+      <link>https://www.menshealth.com/nutrition/a26149219/is-pizza-healthy/</link>
+      <author>A223D</author>
+      <pubDate>Sun, 11 Aug 2024 03:51:41 UTC</pubDate>
     </item>
   </channel>
 </rss>
