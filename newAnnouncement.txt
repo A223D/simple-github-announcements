@@ -17,7 +17,7 @@
 # You can remove this guideline if needed, but it is recommended to keep it and just copy the above lines below
 
 Topic*: Free Food NEW
-Topic Description*: This annoucement chain tracks free food around the office.
+Topic Description*: This announcement chain tracks free food around the office.
 Topic Link: https://www.businessinsider.com/free-food-silicon-valley-tech-employees-apple-google-facebook-2018-7
 Language*: en-ca
 Managing Editor*: Kushagra(example@email.com)

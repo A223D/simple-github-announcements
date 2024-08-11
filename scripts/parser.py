@@ -7,7 +7,7 @@ This script should be invoked when a new announcement is triggered.
 
 3. Create the new announcement.
 
-4. Run XML linter on the new annoucement file. 
+4. Run XML linter on the new announcement file. 
 '''
 
 import sys
